@@ -2,6 +2,7 @@
   "name": "orel-portfolio",
   "version": "1.0.0",
   "description": "Orel Marom's portfolio built with React and Tailwind CSS",
+  "homepage": "https://orelmarom.github.io/orel-portfolio/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
