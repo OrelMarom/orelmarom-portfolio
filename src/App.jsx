@@ -1,21 +1,20 @@
-import Header from './components/Header'
-import Hero from './components/Hero'
-import Project1 from './components/Project1'
-import Project2 from './components/Project2'
-import Footer from './components/Footer'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import HomePage from './pages/HomePage';
+import ProjectPage1 from './pages/ProjectPage1';
+import AboutPage from './pages/AboutPage';
+import ContactPage from './pages/ContactPage';
 
 function App() {
   return (
-    <div className="bg-white text-black w-full min-w-[360px]">
-      <Header />
-      <Hero />
-      <div className="w-[80%] mx-auto">
-        <Project1 />
-        <Project2 />
-      </div>
-      <Footer />
-    </div>
-  )
+    <Router basename="/orelmarom-portfolio">
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/work" element={<ProjectPage1 />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+      </Routes>
+    </Router>
+  );
 }
 
-export default App
+export default App;

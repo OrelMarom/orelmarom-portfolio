@@ -39,7 +39,7 @@
 }
 
 .body-base {
-  @apply font-body text-base font-normal leading-relaxed;
+  @apply font-body text-base font-light leading-relaxed tracking-wide;
 }
 
 .body-sm {
@@ -53,16 +53,38 @@
 
 /* Buttons */
 .btn-primary {
-  @apply bg-black text-white px-6 py-2 rounded-xl font-body text-sm font-medium shadow-md hover:bg-gray-800 transition;
+  @apply bg-black text-white px-6 py-2 rounded-xl font-body text-sm font-medium shadow-md transition hover:bg-neutral-700;
 }
 
 .btn-secondary {
-  @apply border border-black text-black px-6 py-2 rounded-xl font-body text-sm font-medium hover:bg-gray-100 transition;
+  @apply text-black bg-white border border-black px-6 py-2 rounded-xl font-body text-sm font-medium shadow-md transition hover:bg-neutral-100 hover:border-neutral-500;
+}
+
+.btn-tertiary {
+  @apply text-black font-body text-sm font-medium px-4 py-2 rounded-lg transition hover:text-neutral-600;
+}
+
+/* How to use:
+    <button className="btn-icon">
+      <IconLinkedin size={16} />
+      LinkedIn
+    </button>
+*/
+.btn-icon {
+  @apply flex items-center gap-2 bg-black text-white px-4 py-2 rounded-xl font-body text-sm font-medium shadow-md transition hover:bg-neutral-700;
+}
+
+.disabled {
+  @apply opacity-50 cursor-not-allowed pointer-events-none;
 }
 
 /* Navigation */
 .nav-link {
-  @apply font-body text-sm md:text-base font-medium tracking-wide uppercase transition-all duration-300 text-neutral-700 hover:text-black hover:underline hover:underline-offset-4 hover:decoration-[1.5px];
+  @apply font-body text-sm md:text-base font-medium tracking-wide uppercase transition-all duration-300 text-gray-500 hover:underline hover:underline-offset-4 hover:decoration-[1.5px];
+}
+
+.nav-link-active {
+  @apply font-body text-sm md:text-base font-medium tracking-wide uppercase transition-all duration-300 text-black underline underline-offset-4 decoration-[1.5px];
 }
 
 /* Inputs */
