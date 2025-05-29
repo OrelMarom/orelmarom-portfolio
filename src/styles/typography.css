@@ -87,6 +87,10 @@
   @apply font-body text-sm md:text-base font-medium tracking-wide uppercase transition-all duration-300 text-black underline underline-offset-4 decoration-[1.5px];
 }
 
+.tab {
+  @apply font-body inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-lg font-medium ring-offset-white transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-400 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-white data-[state=active]:text-gray-900 data-[state=active]:shadow-sm;
+}
+
 /* Inputs */
 .label {
   @apply block text-sm font-medium text-gray-700 mb-1 font-body;

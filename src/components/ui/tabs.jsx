@@ -43,12 +43,22 @@ export function TabsTrigger({ value, children, className = "" }) {
   );
 }
 
-export function TabsContent({ value, children }) {
+export function TabsContent({ value, children, image }) {
   const { activeTab } = useContext(TabsContext);
 
+  if (activeTab !== value) return null;
+
   return (
-    <AnimatePresence mode="wait">
-      {activeTab === value && (
+    <div className="mt-4 flex flex-col md:flex-row gap-6 items-start">
+      {/* Image section do NOT animate */}
+      <img
+        src={image}
+        alt={`${value} icon`}
+        className="h-[250px] w-auto object-cover rounded-full shrink-0"
+      />
+
+      {/* Text section do animate */}
+      <AnimatePresence mode="wait">
         <motion.div
           key={value}
           initial={{ opacity: 0 }}
@@ -59,11 +69,36 @@ export function TabsContent({ value, children }) {
             ease: [0.1, 0.05, 0.55, 0.95],
             delay: 0.2,
           }}
-          className="mt-4"
+          className="flex-1"
         >
           {children}
         </motion.div>
-      )}
-    </AnimatePresence>
+      </AnimatePresence>
+    </div>
   );
 }
+
+// export function TabsContent({ value, children }) {
+//   const { activeTab } = useContext(TabsContext);
+
+//   return (
+//     <AnimatePresence mode="wait">
+//       {activeTab === value && (
+//         <motion.div
+//           key={value}
+//           initial={{ opacity: 0 }}
+//           animate={{ opacity: 1 }}
+//           exit={false}
+//           transition={{
+//             duration: 0.8,
+//             ease: [0.1, 0.05, 0.55, 0.95],
+//             delay: 0.2,
+//           }}
+//           className="mt-4"
+//         >
+//           {children}
+//         </motion.div>
+//       )}
+//     </AnimatePresence>
+//   );
+// }

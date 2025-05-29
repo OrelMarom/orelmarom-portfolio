@@ -5,19 +5,21 @@ function Hero() {
       <p
         className="heading-lg text-xl text-white w-full flex justify-center items-center"
         style={{
-          background: '#bdbdbd',
-          letterSpacing: '15px',
-          lineHeight: '60px',
-          maxWidth: '100vw',      // Responsive: 100% of viewport width
-          minWidth: '250px',     // Optional: minimum width for small screens
-          width: '100%',
+          background: "#bdbdbd",
+          letterSpacing: "15px",
+          lineHeight: "60px",
+          maxWidth: "100vw", // Responsive: 100% of viewport width
+          minWidth: "250px", // Optional: minimum width for small screens
+          width: "100%",
         }}
       >
         Frontend Developer &amp; UX Specialist
       </p>
-      <div className="absolute bottom-4 animate-bounce text-[color:#bdbdbd] text-5xl">↓</div>
+      <div className="absolute bottom-4 animate-bounce text-[color:#bdbdbd] text-5xl">
+        ↓
+      </div>
     </section>
-  )
+  );
 }
 
-export default Hero
+export default Hero;

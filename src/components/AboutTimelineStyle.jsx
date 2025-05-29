@@ -1,3 +1,5 @@
+// NOTE: Currently not used, but kept for potential future use
+
 import { useState } from "react";
 import { Button } from "../components/ui/button";
 import { motion } from "framer-motion";
